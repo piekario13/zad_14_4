@@ -63,6 +63,17 @@ var movies = [
       },
     });
 
+    var MovieImage = React.createClass({
+        propTypes: {
+            image: React.PropTypes.object.isRequired,
+        },
+        render: function() {
+            return (
+                React.createElement('img', {src: this.props.img})
+            )
+        },
+      });
+    
     var MoviesList = React.createClass({
         propTypes: {
             movies: React.PropTypes.array.isRequired,
